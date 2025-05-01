@@ -1,0 +1,5 @@
+start: qi
+accepting: {qf}
+qi (_, _ -> z, q0)
+q0 (a, z -> az, q0) (a, a -> aa, q0) (b, z -> bz, qf) (b, a -> _, q1)
+q1 (b, a -> _, q1) (_, a -> _, qf) (b, z -> _, qf)
