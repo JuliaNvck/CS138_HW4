@@ -1,3 +1,4 @@
+alphabet: {a, b}
 start: qi
 accepting: {qf}
 qi (_, _ -> $, q0)
