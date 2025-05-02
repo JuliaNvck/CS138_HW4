@@ -1,11 +1,12 @@
-alphabet: {a, b}
 start: qi
 accepting: {qf}
 qi (_, _ -> z, q0)
-q0 (a, z -> az, q0) (a, a -> aa, q0) (b, a -> a, q1)
-q1 (b, a -> a, q2)
-q2 (b, a -> a, q3)
-q3 (b, a -> _, q3) (b, a -> _, q4) (b, a -> _, q5) (_, z -> _, qf)
-q4 (b, a -> _, q3)
-q5 (b, a -> _, q6)
-q6 (b, a -> _, q3)
+q0 (_, z -> z, q1) (_, z -> z, q2) (_, z -> z, q3)
+q1 (a, z -> az, q1) (a, a -> aa, q4)
+q2 (a, z -> az, q2) (a, a -> aaaa, q5)
+q3 (a, z -> az, q3) (a, a -> aaaaaa, q6)
+q4 (a, a -> aa, q4) (b, a -> bbba, q7)
+q5 (a, a -> aaa, q5) (_, a -> bba, q7)
+q6 (a, a -> aaaa, q5) (_, a -> bba, q7)
+q7 (b, b -> _, q7) (b, a -> _, q7) (_, z -> _, qf)
+
