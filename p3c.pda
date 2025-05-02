@@ -2,6 +2,6 @@ alphabet: {a, b}
 start: qi
 accepting: {qf}
 qi (_, _ -> z, q0)
-q0 (a, z -> az, q0) (a, a -> aa, q0) (b, z -> bz, qf) (b, a -> _, q1) (_, a -> _, qf)
+q0 (a, z -> az, q0) (a, a -> aa, q0) (b, z -> bz, q2) (b, a -> _, q1) (_, a -> _, qf)
 q1 (b, a -> _, q1) (_, a -> _, qf) (b, z -> bz, q2)
 q2 (b, b -> bb, q2) (_, b -> b, qf)
