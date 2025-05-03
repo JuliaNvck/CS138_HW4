@@ -1,8 +1,0 @@
-alphabet: {a, b}
-start: qi
-accepting: {qf}
-qi (_, _ -> z, q0)
-q0 (a, z -> az, q1) (b, z -> bz, q2)
-q1 (a, a -> aa, q1) (b, a -> _, q1) (b, z -> bz, q2) (_, z -> _, qt) (_, a -> _, qf)
-q2 (b, b -> bb, q2) (a, b -> _, q2) (a, z -> az, q1) (_, z -> _, qt) (_, b -> _, qf)
-qt (_, z -> _, qt)
