@@ -3,6 +3,6 @@ start: qi
 accepting: {qf}
 qi (_, _ -> z, q0)
 q0 (a, z -> aaaaz, q0) (a, z -> aaaz, q0) (a, a -> aaa, q1)
-q1 (a, a -> aa, q1) (a, a -> aaaa, q1) (b, a -> _, q2)
+q1 (a, a -> aa, q1) (a, a -> aaa, q1) (a, a -> aaaa, q1) (b, a -> _, q2)
 q2 (b, a -> _, q2) (_, z -> _, qf)
 
